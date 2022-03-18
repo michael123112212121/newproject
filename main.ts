@@ -2,8 +2,31 @@ namespace SpriteKind {
     export const beans = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    animation.runImageAnimation(
+    meBean,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `],
+    500,
+    false
+    )
 })
+let meBean: Sprite = null
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -126,15 +149,15 @@ scene.setBackgroundImage(img`
     8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888889999999999999999999999966666666666666688888888
     8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
     `)
-let myDart = darts.create(img`
-    . . . . . . . . . . . . . . . . 
+meBean = darts.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . e e e . . . . . . . . . 
     . . . e e e e e . . . . . . . . 
+    . . e e e e e e . . . . . . . . 
     . . . e e e e e . . . . . . . . 
-    . . . e e e e e . . e . . . . . 
-    . . . . e e e e e e e e . . . . 
+    . . . e e e e e e . e e . . . . 
+    . . . . e e e e e e e e e . . . 
     . . . . . e e e e e e e e . . . 
     . . . . . e e e e e e e e . . . 
     . . . . . . e e e e e e . . . . 
@@ -144,5 +167,5 @@ let myDart = darts.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.beans)
-myDart.controlWithArrowKeys()
-myDart.setTrace()
+meBean.controlWithArrowKeys()
+meBean.setTrace()
