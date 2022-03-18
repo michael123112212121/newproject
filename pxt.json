@@ -1,8 +1,9 @@
 {
-    "name": "newProject",
+    "name": "angryBeans",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "darts": "*"
     },
     "files": [
         "main.blocks",
